@@ -1,12 +1,24 @@
-import { Injectable } from "@nestjs/common";
-import { PrismaService } from "prisma.config";
+import { Injectable, Logger } from "@nestjs/common";
 import { CreateTodoDto } from "../dto/create-todo.dto";
+import { CreateTodoRepository } from "../respository";
 
 @Injectable()
-export class CreateTodoRepository{
-    constructor(private readonly prisma: PrismaService){}
+  export class CreateTodoUseCase {
+    constructor(
+        private readonly createTodoRepository: CreateTodoRepository,
+        private readonly logger: Logger
+    ){}
 
-    async executw(data: CreateTodoDto){
-        return await this.prisma.todo.create({data})
+  async execute(data: CreateTodoDto){
+    try {
+        this.logger.log('Creating toDo ...');
+        const todo = await this.createTodoRepository.create(data);
+        this.logger.log('ToDo created successfully');
+        return todo;
+    } catch (error) {
+        this.logger.error(error);
+        throw new Error('Failed to create toDo');
     }
-}
+  }
+
+  }

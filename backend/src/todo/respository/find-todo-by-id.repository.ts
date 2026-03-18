@@ -3,7 +3,7 @@ import { PrismaService } from "prisma.config";
 import { CreateTodoDto } from "../dto/create-todo.dto";
 
 @Injectable()
-export class FindAllTodosRepository{
+export class FindTodoByIdRepository{
     constructor(private readonly prisma: PrismaService){}
 
     async execute (id: string){
