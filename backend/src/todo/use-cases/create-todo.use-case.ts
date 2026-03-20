@@ -9,7 +9,7 @@ import { CreateTodoRepository } from "../respository";
         private readonly logger: Logger
     ){}
 
-  async execute(data: CreateTodoDto){
+  async cretae(data: CreateTodoDto){
     try {
         this.logger.log('Creating toDo ...');
         const todo = await this.createTodoRepository.create(data);
