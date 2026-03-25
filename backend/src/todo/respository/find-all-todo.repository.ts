@@ -6,9 +6,9 @@ export class FindAllTodosRepository{
     findAll() {
         throw new Error("Method not implemented.");
     }
-    constructor(private readonly prisma: PrismaService){}
+   constructor(private readonly prisma: PrismaService){}
 
 async execute(){
-        return await this.prisma.todo.findMany()
+        return await this.prisma.todo.findAll()
     }
 }
