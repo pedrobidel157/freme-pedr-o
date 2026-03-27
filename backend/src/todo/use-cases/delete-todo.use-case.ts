@@ -10,7 +10,7 @@ import { DeleteTodoRepository, FindTodoByIdRepository } from "../respository";
         private readonly logger: Logger,
     ){}
   
-   async execute(id:string) {
+   async delete(id:string) {
 try{
     this.logger.log('Deleting toDo...');
 

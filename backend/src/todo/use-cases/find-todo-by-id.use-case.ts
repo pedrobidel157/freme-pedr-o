@@ -4,7 +4,6 @@ import { FindTodoByIdRepository } from "../respository";
 
 @Injectable()
  export class FindTodoByIdUseCase{
-    findTodoByIdUseCase: any;
     constructor(
         private readonly findTodoByIdRepository: FindTodoByIdRepository,
         private readonly logger: Logger

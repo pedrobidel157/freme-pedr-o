@@ -3,8 +3,8 @@ import { PrismaService } from "prisma.config";
 import { CreateTodoDto } from "../dto/create-todo.dto";
 
 @Injectable()
-export class FindTodoByIdRepository{
-    findById(id: string) {
+export class FindAllTodoRepository{
+    findAll() {
         throw new Error("Method not implemented.");
     }
     constructor(private readonly prisma: PrismaService){}
