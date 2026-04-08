@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { PrismaService } from "prisma.config";
+import { PrismaService } from "../../shared/databases/prisma.database";
 
 @Injectable()
 export class FindTodoByIdRepository{
