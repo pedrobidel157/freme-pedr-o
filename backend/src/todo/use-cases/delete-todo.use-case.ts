@@ -1,5 +1,5 @@
 import { Injectable, Logger, NotFoundException } from "@nestjs/common";
-import { DeleteTodoRepository, FindTodoByIdRepository } from "../respository";
+import { DeleteTodoRepository, FindTodoByIdRepository } from "../repository";
 
 
 @Injectable()

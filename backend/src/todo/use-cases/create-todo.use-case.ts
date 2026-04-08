@@ -1,6 +1,6 @@
 import { Injectable, Logger } from "@nestjs/common";
 import { CreateTodoDto } from "../dto/create-todo.dto";
-import { CreateTodoRepository } from "../respository";
+import { CreateTodoRepository } from "../repository";
 
 @Injectable()
   export class CreateTodoUseCase {
@@ -9,7 +9,7 @@ import { CreateTodoRepository } from "../respository";
         private readonly logger: Logger
     ){}
 
-  async cretae(data: CreateTodoDto){
+  async create(data: CreateTodoDto){
     try {
         this.logger.log('Creating toDo ...');
         const todo = await this.createTodoRepository.create(data);

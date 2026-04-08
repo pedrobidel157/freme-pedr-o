@@ -1,8 +1,12 @@
 import { Injectable, Logger, NotFoundException } from "@nestjs/common";
-import { FindTodoByIdRepository, UpdateTodoRepository } from "../respository";
+import { FindTodoByIdRepository, UpdateTodoRepository } from "../repository";
+import { UpdateTodoDto } from "../dto/update-todo.dto";
 
 @Injectable()
- export class DeleteTodoUseCase{
+ export class UpdateTodoUseCase{
+   update(id: string, updateTodoDto: UpdateTodoDto) {
+     throw new Error('Method not implemented.');
+   }
    constructor(
         private readonly updateTodoRepository: UpdateTodoRepository,
         private readonly findTodoByIdRepository:FindTodoByIdRepository,

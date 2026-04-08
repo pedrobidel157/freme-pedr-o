@@ -1,9 +1,12 @@
 import { Injectable, Logger } from "@nestjs/common";
-import { FindTodoByIdRepository } from "../respository";
+import { FindTodoByIdRepository } from "../repository";
 
 
 @Injectable()
  export class FindTodoByIdUseCase{
+    findById(id: string) {
+      throw new Error('Method not implemented.');
+    }
     constructor(
         private readonly findTodoByIdRepository: FindTodoByIdRepository,
         private readonly logger: Logger
